@@ -1,6 +1,6 @@
 package com.multithreading;
 
-class Callme3{
+class CallMe3 {
     void call(String msg){
         System.out.print(" [ "+msg);
         try {
@@ -15,12 +15,12 @@ class Callme3{
 }
 class Caller3 implements Runnable{
     String msg;
-    Callme3 target;
+    final CallMe3 target;
     Thread thread;
 
-    public Caller3(Callme3 targ, String str)
+    public Caller3(CallMe3 tar, String str)
     {
-        target = targ;
+        target = tar;
         msg = str;
         thread = new Thread(this);
     }
@@ -33,7 +33,7 @@ class Caller3 implements Runnable{
 }
 public class ThreadSynchronizedStatement {
     public static void main(String[] args) {
-        Callme3 target = new Callme3();
+        CallMe3 target = new CallMe3();
         Caller3 obj1 = new Caller3(target, "Hello");
         Caller3 obj2 = new Caller3(target, "Synchronized");
         Caller3 obj3 = new Caller3(target, "World");
