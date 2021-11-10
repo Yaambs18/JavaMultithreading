@@ -5,6 +5,7 @@ class NewThread extends Thread{
         super("DemoThread");
         System.out.println("Child thread: "+this);
     }
+    @Override
     public void run(){
         try{
             for(int i=0;i<5;i++){
