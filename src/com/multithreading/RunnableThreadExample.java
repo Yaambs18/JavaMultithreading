@@ -1,9 +1,9 @@
 package com.multithreading;
 
-public class StartThreadExample implements Runnable{
+public class RunnableThreadExample implements Runnable{
     Thread t;
 
-    StartThreadExample(){
+    RunnableThreadExample(){
         t = new Thread(this, "My thread");
         System.out.println("Child Thread: "+ t);
     }
@@ -22,7 +22,7 @@ public class StartThreadExample implements Runnable{
 }
 class ThreadDemo{
     public static void main(String[] args) {
-        StartThreadExample nt = new StartThreadExample();
+        RunnableThreadExample nt = new RunnableThreadExample();
         nt.t.start();
         try {
             for (int i = 0; i < 5; i++) {
