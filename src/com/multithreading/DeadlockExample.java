@@ -24,7 +24,7 @@ class Bar{
     synchronized void bar(Foo fooObj){
         String name = Thread.currentThread().getName();
 
-        System.out.println(name + "entered Bar.bar");
+        System.out.println(name + " entered Bar.bar");
 
         try{
             Thread.sleep(1000);
