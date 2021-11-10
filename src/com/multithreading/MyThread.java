@@ -4,10 +4,10 @@ public class MyThread
 {
     public static void main(String[] args)
     {
-        Thread t= new Thread("My first thread");
+        Thread thread= new Thread("My first thread");
 
-        t.start();
-        String name = t.getName();
+        thread.start();
+        String name = thread.getName();
         System.out.println(name);
     }
 }
